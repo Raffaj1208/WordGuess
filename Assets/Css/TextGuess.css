@@ -4,13 +4,13 @@ body{
     align-content: center;
 }
 
-header{
+#header{
     text-align: center;
     font-size: xxx-large;
     background-color: darkslategray;
     color: white;
 }
-#h2 {
+nav {
     font-weight: bold; font-size: x-large;
     border: solid; border-color: darkslateblue;
     height: max-content; width: max-content;
