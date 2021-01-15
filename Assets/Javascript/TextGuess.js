@@ -35,6 +35,8 @@ var guessAble = ['yes', 'no', 'maybe', 'who', 'what', 'when'];
             while (alreadyGuessed > 0) {
                 alreadyGuessed.pop();
             }
+            right = 0;
+            wrong = 0;
             guessesAvailable = 10;
             start();
         };
