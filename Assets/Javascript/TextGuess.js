@@ -25,17 +25,13 @@ var guessAble = ['yes', 'no', 'maybe', 'who', 'what', 'when'];
            wrong = 0;
            won = 0;
            lost = 0;
-           while (alreadyGuessed > 0) {
-                alreadyGuessed.pop();
-            }
-           start();
+           
        };
 
         function matchReset(){
-            while (alreadyGuessed > 0) {
-                alreadyGuessed.pop();
-            }
             guessesAvailable = 10;
+            right = 0;
+            wrong = 0;
             start();
         };
 
