@@ -14,13 +14,13 @@ nav {
     font-size: 50px;
     color: white;
     padding: 50px;
+    border-radius: 2px;
 }
-
 #setBar {
     font-size: x-large;
     color: white;
     padding: 5px; margin: 5px;
-    font-weight: bold
+    font-weight: bold;
 }
 #matchBar {
     font-size: large;
@@ -30,28 +30,40 @@ nav {
 main {
     height: max-content; width: max-content;
     margin-left: auto; margin-right: auto;
-    margin-top: 45px;
-    background-size: cover; background-position: bottom;
-}
-li {
-    text-align: center;
-
+    margin-top: 2px;
+    border-radius: 3px;
 }
 #interaction {
     text-align: center;
     margin: 5px;
 }
 input {
+    padding: 5px;
     background-color:white;
-    border-radius: 15px;
+    border-radius: 5px;
     color: black;
 }
 #submit {
-    background-color: blue;
-    border-radius: 10px;
+    background-color: rgb(2, 51, 5);
+    border-radius: 5px;
+    border-style: inset;
+    border-color: black;
     color: white;
-    padding: 3px;
+    padding: 7px;
+    margin: 2px;
 }
 #yourGuessGrab {
+    margin-left: auto; margin-right: auto;
+    color: black;
+    font-size: medium;
     text-align: center;
+    width: max-content;
+    border-radius: 3px;
+}
+#wordBody {
+    text-align: right;
+    color: red;
+}
+#listHead {
+    color:black;
 }
