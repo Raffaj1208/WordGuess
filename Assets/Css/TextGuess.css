@@ -15,6 +15,7 @@ nav {
 }
 #matchBar {
     font-size: small;
+    font-weight: bolder;
     color: black;
 }
 main {
