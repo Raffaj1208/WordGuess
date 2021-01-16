@@ -1,22 +1,31 @@
+body {
+    background-position: center;
+    background-size: cover;
+    background-image: url('../Images/wordGuess.jpg');
+}
 nav {
+    background-image: url('../Images/chalk2.jpg');
+    background-position: center;
+    background-size: cover;
     margin-left: auto; margin-right: auto;
     width: 85%;
     height: max-content;
     text-align: center;
     font-size: 50px;
-    color: black;
+    color: white;
     padding: 50px;
 }
+
 #setBar {
-    font-size: medium;
-    color: black;
+    font-size: x-large;
+    color: white;
     padding: 5px; margin: 5px;
-    font-weight: bold;
+    font-weight: bold
 }
 #matchBar {
-    font-size: small;
+    font-size: large;
     font-weight: bolder;
-    color: black;
+    color: white;
 }
 main {
     height: max-content; width: max-content;
@@ -33,11 +42,13 @@ li {
     margin: 5px;
 }
 input {
-    background-color: bisque;
+    background-color:white;
+    border-radius: 15px;
     color: black;
 }
 #submit {
     background-color: blue;
+    border-radius: 10px;
     color: white;
     padding: 3px;
 }

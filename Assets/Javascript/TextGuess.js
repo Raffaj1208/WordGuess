@@ -44,7 +44,7 @@ var guessAble = ['yes', 'no', 'maybe', 'who', 'what', 'when','where', 'why'];
        $('#submit').on('click', function() {
            var yourAnswer = $('#answer').val().trim();
            alreadyGuessed.push(yourAnswer);
-           $('#yourGuesses').html(alreadyGuessed);
+           $('#yourGuesses').html('' + alreadyGuessed + '');
            
            if (yourAnswer === random) {
                right ++;
