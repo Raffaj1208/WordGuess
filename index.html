@@ -10,6 +10,17 @@
 <body>
     <nav>
         <div id="header">Word Guess Game</div>
+    </nav>
+    <div id="matchBar">
+        <div id="won"></div>
+        <div id="lost"></div>
+    </div>
+    <div id="setBar">
+        <div id="right"></div>
+        <div id="wrong"></div>
+        <div id="guessesLeft"></div>
+    </div>
+    <main>
         <div id="listHead">Here is a list of the words that can potentially be the correct answer:
             <div id="list">
                 <il>
@@ -24,16 +35,14 @@
                 </il>
             </div>
         </div>
-        <div id="won"></div><div id="lost"></div>
-        <div id="right"></div> <div id="wrong"></div><div id="guessesLeft"></div>
-        <div>Your Guesses for this match:<div id="yourGuesses"></div></div>
-    </nav>
-    <main>
-        <h1 id="questions"></h1><br>
-        <div id="instructions"></div><br>
-        <input type="text" name="answer" id="answer" placeholder="answer here"><br>
-        <br><button id="submit">Submit</button><br>
     </main>
-    <footer></footer>
+        <div id="interaction">
+            <input type="text" name="answer" id="answer" placeholder="answer here"><br>
+            <br><button id="submit">Submit</button><br>
+        </div>
+        <div id="yourGuessGrab">Your Guesses for this match:
+            <div id="yourGuesses"></div>
+        </div>
     <script type="text/javascript" src="./Assets/Javascript/TextGuess.js"></script>
 </body>
+</html>
