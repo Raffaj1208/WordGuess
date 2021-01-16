@@ -7,16 +7,21 @@ var guessAble = ['yes', 'no', 'maybe', 'who', 'what', 'when'];
        var alreadyGuessed = [];
        var correctAnswer = Math.floor(Math.random() * guessAble.length);
        var random = guessAble[correctAnswer];
-       console.log(correctAnswer, random);
+
+       function randomize() {
+        correctAnswer = Math.floor(Math.random() * guessAble.length);
+        random = guessAble[correctAnswer];
+        console.log(correctAnswer, random);
+       };
 
        function start() {
+           randomize();
            $('#wrong').html('Wrong: ' + wrong);
            $('#right').html('Right: ' + right);
            $('#guessesLeft').html('Guesses You Have Left: ' + guessesAvailable);
            $('#won').html('Matches You Have Won: ' + won);
            $('#lost').html('Matches You Have Lost: ' + lost);
-           
-       };
+        };
        start();
 
        function gameReset() {
@@ -42,6 +47,9 @@ var guessAble = ['yes', 'no', 'maybe', 'who', 'what', 'when'];
            
            if (yourAnswer === random) {
                right ++;
+               // var nextGuess = Math.floor(Math.random() * guessAble.length);
+               // var again = guessAble[nextGuess];
+               // console.log(again);
                start();
            } else {
                guessesAvailable --;
