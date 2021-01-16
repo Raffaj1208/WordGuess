@@ -13,9 +13,9 @@ var guessAble = ['yes', 'no', 'maybe', 'who', 'what', 'when'];
         random = guessAble[correctAnswer];
         console.log(correctAnswer, random);
        };
+       randomize();
 
        function start() {
-           randomize();
            $('#wrong').html('Wrong: ' + wrong);
            $('#right').html('Right: ' + right);
            $('#guessesLeft').html('Guesses You Have Left: ' + guessesAvailable);
@@ -33,7 +33,8 @@ var guessAble = ['yes', 'no', 'maybe', 'who', 'what', 'when'];
            
        };
 
-        function matchReset(){
+        function matchReset() {
+            alreadyGuessed = [];
             guessesAvailable = 10;
             right = 0;
             wrong = 0;
@@ -43,13 +44,11 @@ var guessAble = ['yes', 'no', 'maybe', 'who', 'what', 'when'];
        $('#submit').on('click', function() {
            var yourAnswer = $('#answer').val().trim();
            alreadyGuessed.push(yourAnswer);
-           $('#yourGuesses').html(alreadyGuessed + ',');
+           $('#yourGuesses').html(alreadyGuessed);
            
            if (yourAnswer === random) {
                right ++;
-               // var nextGuess = Math.floor(Math.random() * guessAble.length);
-               // var again = guessAble[nextGuess];
-               // console.log(again);
+               randomize();
                start();
            } else {
                guessesAvailable --;
@@ -58,21 +57,17 @@ var guessAble = ['yes', 'no', 'maybe', 'who', 'what', 'when'];
            }
            if (right === 5) {
                won ++;
-               $('#yourGuesses').empty();
                matchReset();
                alert('You\'ve Won A Match !!');
            } else if (wrong === 10 || guessesAvailable === 0) {
                lost ++;
-               $('#yourGuesses').empty();
                matchReset();
                alert('You May Have Lost The Battle But You Have Not Lost The War !');
            }
            if (lost === 5) {
-               $('#yourGuesses').empty();
                alert('You\'ve Officially lost.. officially');
                gameReset();
            } else if (won === 5) {
-               $('#yourGuesses').empty();
                alert('You\'ve Officially Defeated The Game.. Think You Can You Do It Again?');
                gameReset();
            }
