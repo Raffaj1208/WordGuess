@@ -1,4 +1,4 @@
-var guessAble = ['yes', 'no', 'maybe', 'who', 'what', 'when'];
+var guessAble = ['yes', 'no', 'maybe', 'who', 'what', 'when','where', 'why'];
        var guessesAvailable = 10;
        var right = 0;
        var wrong = 0;
